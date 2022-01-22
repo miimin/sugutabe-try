@@ -2,15 +2,174 @@
 /*PC：設定なし（実質1025px以上）
 タブレット：1024px [max-width : 1024px]
 スマートフォン：599px [max-width : 599px]320*/
+/*html {
+  scroll-behavior: smooth;
+}*/
 a {
   text-decoration: none;
   color: #fff;
   cursor: pointer;
 }
 
+.under a {
+  line-height: 1.5rem;
+}
+
+.under a::after {
+  content: "";
+  display: block;
+  -webkit-transition: all 0.6s;
+  transition: all 0.6s;
+  border-bottom: solid 2px #333;
+  border-radius: 2px;
+  width: 0;
+}
+
+.under a:hover::after {
+  border-bottom: solid 2px #333;
+  width: 100%;
+}
+
 svg {
   width: 100vw;
   height: auto;
+}
+
+.bg-yasai,
+.bg-yasai2 {
+  opacity: 0.04;
+  z-index: -99;
+  position: absolute;
+}
+
+.nasu {
+  width: 200px;
+  bottom: -60%;
+  left: 0;
+}
+
+@media screen and (max-width: 599px) {
+  .nasu {
+    width: 150px;
+    bottom: -5%;
+  }
+}
+
+.kinoko {
+  width: 200px;
+  top: 10%;
+  right: 0;
+}
+
+@media screen and (max-width: 599px) {
+  .kinoko {
+    width: 130px;
+    top: 5%;
+  }
+}
+
+.piman {
+  width: 180px;
+  top: -15%;
+  left: 0;
+}
+
+@media screen and (max-width: 599px) {
+  .piman {
+    width: 130px;
+    top: -15%;
+  }
+}
+
+.ninjin {
+  width: 250px;
+  bottom: -60%;
+  right: 0;
+}
+
+@media screen and (max-width: 599px) {
+  .ninjin {
+    width: 140px;
+    bottom: -10%;
+  }
+}
+
+.morokosi {
+  width: 250px;
+  bottom: -50%;
+  left: 0;
+}
+
+@media screen and (max-width: 599px) {
+  .morokosi {
+    width: 120px;
+    bottom: -40%;
+  }
+}
+
+.daikon {
+  width: 300px;
+  top: -5%;
+  right: 0;
+}
+
+@media screen and (max-width: 599px) {
+  .daikon {
+    width: 130px;
+    top: -20%;
+  }
+}
+
+.tamanegi {
+  width: 250px;
+  bottom: -10%;
+  left: 0;
+}
+
+@media screen and (max-width: 599px) {
+  .tamanegi {
+    width: 150px;
+    bottom: -40%;
+  }
+}
+
+.kabocha {
+  width: 300px;
+  top: -15%;
+  right: 0;
+}
+
+@media screen and (max-width: 599px) {
+  .kabocha {
+    width: 150px;
+    top: -50%;
+  }
+}
+
+.takenoko {
+  width: 250px;
+  top: 70%;
+  left: 0;
+}
+
+@media screen and (max-width: 599px) {
+  .takenoko {
+    width: 110px;
+    top: 80%;
+  }
+}
+
+.renkon {
+  width: 300px;
+  top: -25%;
+  right: 0;
+}
+
+@media screen and (max-width: 599px) {
+  .renkon {
+    width: 140px;
+    top: -20%;
+  }
 }
 
 .hamburger {
@@ -51,8 +210,8 @@ svg {
 }
 
 .hamburger-active span:nth-of-type(1) {
-  -webkit-transform: translate(3px, 10px) rotate(315deg);
-          transform: translate(3px, 10px) rotate(315deg);
+  -webkit-transform: translate(3px, 10px) rotate(-225deg);
+          transform: translate(3px, 10px) rotate(-225deg);
   width: 30px;
 }
 
@@ -61,8 +220,8 @@ svg {
 }
 
 .hamburger-active span:nth-of-type(3) {
-  -webkit-transform: translate(3px, -10px) rotate(-315deg);
-          transform: translate(3px, -10px) rotate(-315deg);
+  -webkit-transform: translate(3px, -10px) rotate(225deg);
+          transform: translate(3px, -10px) rotate(225deg);
   width: 30px;
 }
 
@@ -101,6 +260,40 @@ svg {
 
 .menu-active {
   right: 0;
+}
+
+.hand {
+  font-size: 1.6rem;
+  margin-bottom: 8px;
+}
+
+@media screen and (max-width: 599px) {
+  .hand {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+}
+
+.hand::before, .hand::after {
+  content: "";
+  background-color: #707070;
+  border-radius: 1px;
+  width: 1px;
+  height: 15px;
+  display: inline-block;
+  vertical-align: -3px;
+}
+
+.hand::before {
+  -webkit-transform: rotate(-35deg);
+          transform: rotate(-35deg);
+  margin-right: 7px;
+}
+
+.hand::after {
+  -webkit-transform: rotate(35deg);
+          transform: rotate(35deg);
+  margin-left: 7px;
 }
 
 .header {
@@ -216,6 +409,7 @@ svg {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  vertical-align: bottom;
 }
 
 @media screen and (max-width: 599px) {
@@ -272,6 +466,10 @@ svg {
     padding: 0 8px;
     margin-bottom: 7px;
   }
+}
+
+#about {
+  position: relative;
 }
 
 .section-toplead__pc {
@@ -482,7 +680,7 @@ svg {
 
 @media screen and (max-width: 599px) {
   .section-shop {
-    padding: 90px 24px 80px;
+    padding: 70px 24px;
     margin-bottom: 60px;
   }
   .section-shop h2 {
@@ -806,6 +1004,7 @@ svg {
 
 .section-guarantee {
   text-align: center;
+  position: relative;
 }
 
 .section-guarantee h2 {
@@ -923,7 +1122,7 @@ svg {
   background-repeat: no-repeat;
   background-size: auto 100%;
   background-position: top;
-  padding: 110px 50px 90px;
+  padding: 115px 50px 60px;
   position: relative;
   margin-bottom: 70px;
 }
@@ -1002,9 +1201,14 @@ svg {
   }
 }
 
-.organic .section-organic__main {
+.organic .section-organic__container {
+  width: 100%;
   max-width: 1124px;
-  margin: 0 auto 60px;
+  margin: 0 auto;
+}
+
+.organic .section-organic__main {
+  margin: 0 auto 70px;
   right: 0;
   left: 0;
   display: -webkit-box;
@@ -1013,7 +1217,7 @@ svg {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 0 60px;
+  padding: 0 10%;
 }
 
 @media screen and (max-width: 599px) {
@@ -1128,13 +1332,13 @@ svg {
 }
 
 .organic .graph {
-  max-width: 900px;
+  max-width: 1004px;
   height: auto;
   background-color: rgba(255, 255, 255, 0.8);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 0 auto;
+  margin: 0 10%;
   border-radius: 8px;
 }
 
@@ -1293,6 +1497,7 @@ svg {
   text-align: center;
   padding-top: 24px;
   margin-bottom: 20px;
+  position: relative;
   background-image: url("../images/mushimegane.png");
   background-repeat: no-repeat;
   background-size: contain;
@@ -1682,6 +1887,7 @@ svg {
   text-align: center;
   margin-bottom: 90px;
   padding: 0 50px;
+  position: relative;
 }
 
 @media screen and (max-width: 599px) {
@@ -1707,7 +1913,6 @@ svg {
 }
 
 .section-voice .hand {
-  font-size: 1.4rem;
   letter-spacing: -0.1rem;
 }
 
@@ -2140,6 +2345,7 @@ svg {
   text-align: center;
   margin-bottom: 70px;
   padding: 0 50px;
+  position: relative;
 }
 
 @media screen and (max-width: 599px) {
@@ -2216,6 +2422,10 @@ svg {
   border-top: none;
 }
 
+.section-try2 {
+  padding: 0 50px;
+}
+
 @media screen and (max-width: 599px) {
   .section-try2 {
     padding: 0 24px;
@@ -2230,7 +2440,7 @@ svg {
   overflow: hidden;
   -webkit-box-shadow: 0 3px 12px rgba(119, 119, 119, 0.06);
           box-shadow: 0 3px 12px rgba(119, 119, 119, 0.06);
-  margin: 0 50px 130px;
+  margin: 0 auto 130px;
 }
 
 @media screen and (max-width: 599px) {
