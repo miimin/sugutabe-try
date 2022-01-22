@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="assets/css/index.css">
     <link rel="stylesheet" href="assets/slick/slick.css">
     <link rel="stylesheet" href="assets/slick/slick-theme.css">
+    <link rel="stylesheet" href="assets/sal/sal.css">
     <script src="https://code.jquery.com/jquery-3.6.0.js"
       integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 
@@ -49,9 +50,9 @@
   <body id="top">
     <header class="header">
       <div class="header-contents">
-        <a href="#top"><img src="assets/images/logo.png" alt="スグ食べ"></a>
+        <a href=" #top"><img src="assets/images/logo.png" alt="スグ食べ"></a>
         <nav>
-          <ul>
+          <ul class="under">
             <li><a href="#about">ABOUT</a></li>
             <li><a href="#trial">TRIAL</a></li>
             <li><a href="#column">COLUMN</a></li>
@@ -64,11 +65,11 @@
         <div class="hamburger"><span></span><span></span><span></span>
           <div class="hamburger-menu">
             <ul>
-              <li><a href="#top">TOP</a></li>
-              <li><a href="#about">ABOUT</a></li>
-              <li><a href="#trial">TRIAL</a></li>
-              <li><a href="#column">COLUMN</a></li>
-              <li><a href="#qa">Q&A</a></li>
+              <li class="under"><a href="#top">TOP</a></li>
+              <li class="under"><a href="#about">ABOUT</a></li>
+              <li class="under"><a href="#trial">TRIAL</a></li>
+              <li class="under"><a href="#column">COLUMN</a></li>
+              <li class="under"><a href="#qa">Q&A</a></li>
               <li>
                 <div class="header-button"><a href="#">
                     お試しセットご注文</a>
@@ -96,6 +97,8 @@
         </div>
       </div>
       <div id="about">
+        <img class="bg-yasai nasu" src="bg-nasu.svg" alt="image">
+        <img class="bg-yasai2 kinoko" src="bg-kinoko.svg" alt="image">
         <div class="section-toplead__pc">
           「スグ食べ」は、最短で24時間以内に届く新鮮なオーガニック野菜宅配サービスです。<br>
           厳選したオーガニック農家さんが作った獲れたての野菜が、その時々の旬に合わせて届きます。<br>
@@ -106,7 +109,8 @@
           食材から選べるのはもちろん、生産者からも選べます。生産方法や生産地、それぞれ異なるこだわりで、お気に入りの農家さんを見つけてください。</div>
       </div>
       <section class="section-reason">
-        <div class="reason-wave"></div>
+        <div class=" reason-wave">
+        </div>
         <div class="section-reason__text">
           <h3>スグ食べが選ばれる<br><span>3</span>つの理由</h3>
           <ol>
@@ -213,6 +217,8 @@
         </div>
       </section>
       <section class="section-guarantee">
+        <img class="bg-yasai2 piman" src="bg-piman.svg" alt="image">
+        <img class="bg-yasai ninjin" src="bg-ninjin.svg" alt="image">
         <h2>スグ食べの品質保証</h2>
         <img src="assets/images/heart.png" alt="ハートを包み込む絵" class="section-guarantee__img-sp">
         <p class="lead">商品に不備があった際には、<br>スグ食べが “全額” 返金対応します。</p>
@@ -234,64 +240,68 @@
           <h2>”オーガニック野菜”って<br>どんなもの？</h2>
           <img src="assets/images/yuki_logo.png" alt="有機JASマーク">
         </div>
-        <div class="section-organic__main">
-          <p>
-            スグ食べが扱っている野菜は、「有機栽培」もしくは「自然栽培」で作られたものに限られます。有機栽培は農薬・化学肥料を使用しない栽培方法で、国で定められた有機JAS規格という厳しい基準をクリアしたものです。この基準をクリアしてはじめて、”有機”、”オーガニック”を名乗ることができます。自然栽培は、有機肥料すら使用せず自然の力で育て上げる方法です。これらの方法で栽培することは簡単ではなく収穫量も控えめなため、一般的なスーパーでオーガニック野菜を目にすることはあまりないかもしれません。
-          </p>
-          <table>
-            <tr>
-              <th><img src="assets/images/organic.png" alt="栽培方法いろいろ"></th>
-              <th>自然栽培</th>
-              <th>有機栽培<br><span>（有機JAS規格）</span></th>
-              <th>慣行栽培<br><span>（一般的）</span></th>
-            </tr>
-            <tr>
-              <th class="th-sp">農薬</th>
-              <td>×</td>
-              <td>×</td>
-              <td>○</td>
-            </tr>
-            <tr>
-              <th class="th-sp">化学肥料</th>
-              <td>×</td>
-              <td>×</td>
-              <td>○</td>
-            </tr>
-            <tr>
-              <th class="th-sp">有機肥料</th>
-              <td>×</td>
-              <td>○</td>
-              <td>○</td>
-            </tr>
-            <tr>
-              <th class="th-sp">収穫量</th>
-              <td>少ない</td>
-              <td>やや少ない</td>
-              <td>ふつう</td>
-            </tr>
-            <tr>
-              <th class="th-sp">生育期間</th>
-              <td>長い</td>
-              <td>やや長い</td>
-              <td>ふつう</td>
-            </tr>
-          </table>
-        </div>
-        <div class="graph">
-          <div class="graph-title__sp">実はこんなに少ない<br>日本のオーガニック農家</div>
-          <div id="lottie-graph2"></div>
-          <div class="graph-text">
-            <div class="graph-title">
-              <p>オーガニック農家は<span class="graph-text__span-sp">、</span><br>国内全体の<span
-                  class="graph-text__span">約0.5％</span><span class="graph-text__span-pconly">だけ！</span></p>
+        <div class="section-organic__container">
+          <div class="section-organic__main">
+            <p>
+              スグ食べが扱っている野菜は、「有機栽培」もしくは「自然栽培」で作られたものに限られます。有機栽培は農薬・化学肥料を使用しない栽培方法で、国で定められた有機JAS規格という厳しい基準をクリアしたものです。この基準をクリアしてはじめて、”有機”、”オーガニック”を名乗ることができます。自然栽培は、有機肥料すら使用せず自然の力で育て上げる方法です。これらの方法で栽培することは簡単ではなく収穫量も控えめなため、一般的なスーパーでオーガニック野菜を目にすることはあまりないかもしれません。
+            </p>
+            <table>
+              <tr>
+                <th><img src="assets/images/organic.png" alt="栽培方法いろいろ"></th>
+                <th>自然栽培</th>
+                <th>有機栽培<br><span>（有機JAS規格）</span></th>
+                <th>慣行栽培<br><span>（一般的）</span></th>
+              </tr>
+              <tr>
+                <th class="th-sp">農薬</th>
+                <td>×</td>
+                <td>×</td>
+                <td>○</td>
+              </tr>
+              <tr>
+                <th class="th-sp">化学肥料</th>
+                <td>×</td>
+                <td>×</td>
+                <td>○</td>
+              </tr>
+              <tr>
+                <th class="th-sp">有機肥料</th>
+                <td>×</td>
+                <td>○</td>
+                <td>○</td>
+              </tr>
+              <tr>
+                <th class="th-sp">収穫量</th>
+                <td>少ない</td>
+                <td>やや少ない</td>
+                <td>ふつう</td>
+              </tr>
+              <tr>
+                <th class="th-sp">生育期間</th>
+                <td>長い</td>
+                <td>やや長い</td>
+                <td>ふつう</td>
+              </tr>
+            </table>
+          </div>
+          <div class="graph">
+            <div class="graph-title__sp">実はこんなに少ない<br>日本のオーガニック農家</div>
+            <div id="lottie-graph2"></div>
+            <div class="graph-text">
+              <div class="graph-title">
+                <p>オーガニック農家は<span class="graph-text__span-sp">、</span><br>国内全体の<span
+                    class="graph-text__span">約0.5％</span><span class="graph-text__span-pconly">だけ！</span></p>
+              </div>
+              <p class="graph-message">実はオーガニック農家は国内農家の約0.5％しか存在していません。<br>
+                でもその希少なオーガニック農家さんは、健やかな野菜を安心して食べてもらいたいという強い気持ちで大切に野菜を作っています。<br>
+                スグ食べでは、そんな農家さんを厳選し、出品していただいています。</p>
             </div>
-            <p class="graph-message">実はオーガニック農家は国内農家の約0.5％しか存在していません。<br>
-              でもその希少なオーガニック農家さんは、健やかな野菜を安心して食べてもらいたいという強い気持ちで大切に野菜を作っています。<br>
-              スグ食べでは、そんな農家さんを厳選し、出品していただいています。</p>
           </div>
         </div>
       </section>
       <section class="section-season">
+        <img class="bg-yasai morokosi" src="bg-morokosi.svg" alt="image">
+        <img class="bg-yasai2 daikon" src="bg-daikon.svg" alt="image">
         <h2><span id="season">旬</span>の野菜<span id="spacing">、</span>なにがある？</h2>
         <p>美味しさはもちろん、栄養価も上がる”旬”。<br class="section-season__p-br">スグ食べでは旬の野菜をお届けしています。<br>
           春夏秋冬、どのような野菜が当てはまるのでしょうか。</p>
@@ -352,26 +362,6 @@
             </li>
           </ul>
         </div>
-
-        <!--
-        
-        <li class="section-QA__list-item second">
-          <div class="Q">
-            <h4>産地直送のサービスってよく見るけど、<br>何が違うの？<span class="triangle sp-triangle">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-              </span>
-            </h4>
-          </div>
-          <div class="A">
-            <p>鮮度が抜群に違います。<br>
-              通常の産直サービスは、一度倉庫などに野菜を集め、そこで箱詰め作業をして配送しています。この仕組みでは、お客様が商品を受け取る時には収穫してから3,4日が経過しています。スグ食べでは、箱詰め作業を農家さんにお願いすることにより、最短で収穫当日に商品を受け取ることができます。
-            </p>
-          </div>
-        </li>
-      -->
       </section>
       <section class="section-farmar">
         <h2>農家さんからのメッセージ</h2>
@@ -415,6 +405,8 @@
         </ul>
       </section>
       <section class="section-voice">
+        <img class="bg-yasai tamanegi" src="bg-tama.svg" alt="image">
+        <img class="bg-yasai2 kabocha" src="bg-kabo.svg" alt="image">
         <p class="hand">おかげさまで感謝のお声をいただいています
         </p>
         <h2>食べてわかった<span>、</span>この違い</h2>
@@ -543,6 +535,8 @@
         </ul>
       </section>
       <section class="section-mediainfo">
+        <img class="bg-yasai takenoko" src="bg-take.svg" alt="image">
+        <img class="bg-yasai2 renkon" src="bg-ren.svg" alt="image">
         <h2>メディア情報</h2>
         <ul>
           <li>
@@ -594,10 +588,15 @@
       <small class="small">@2021 SUGUTABE Inc.
       </small>
     </footer>
-    <script src="assets/css/index.js"> </script>
+    <script src="assets/css/index.js"></script>
+    <script src="assets/sal/sal.js"></script>
+    <script>
+      sal();
+    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.8.1/lottie.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="assets/slick/slick.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.1.0/dist/simpleParallax.min.js"></script>
     <script>
       lottie.loadAnimation({
         container: document.getElementById('lottie-graph2'), // アニメーションを追加する要素
