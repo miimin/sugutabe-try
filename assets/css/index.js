@@ -3,10 +3,10 @@ $(function () {
   $(".hamburger").click(function () {
     $(this).toggleClass('hamburger-active');
     $(".hamburger-menu").toggleClass("menu-active");
-    //$('ul li').hide(); //隠しておいて
-    //   $('ul li').each(function (i) {
-    //    $(this).delay(80 * i).fadeIn(500); //それぞれフェードイン
-    //});
+    /*$('ul li').hide(); //隠しておいて
+    $('ul li').each(function (i) {
+      $(this).delay(80 * i).fadeIn(400); //それぞれフェードイン
+    });*/
   });
   $(".hamburger-menu a").click(function () {
     $(".hamburger").removeClass('hamburger-active');
@@ -19,7 +19,7 @@ $(function () {
     var position = $(id).offset().top - header_height + adjust;
     $("html, body").animate({
       "scrollTop": position
-    }, 500, "swing");
+    }, 600, "swing");
     return false;
   });
 
@@ -41,24 +41,32 @@ $(function () {
   //
   //
   //
-
+  var image = document.querySelectorAll('.bg-yasai');
+  new simpleParallax(image, {
+    overflow: "true",
+    scale: 1.5
+  });
+  var image = document.querySelectorAll('.bg-yasai2');
+  new simpleParallax(image, {
+    overflow: "true",
+    scale: 1.4,
+    orientation: 'down'
+  }, );
 
   //
-  $(function () {
-    $(".section-season__list-item").click(function () {
-      $(".season-beg", this).slideToggle();
-      var $name = $(this).find(".season-name");
-      var $beg = $(this).find(".season-beg");
-      if ($beg.hasClass("open")) { //.Aがopenを持っている
-        $beg.removeClass("open"); //.openを消す       
-        $(this).find(".triafter").removeClass("triafter");
-        $(this).find(".spring-triafter").removeClass("spring-triafter"); //下三角にする
-      } else { //.Aがopenを持たない
-        $beg.addClass("open");
-        $(this).find(".triangle").addClass("triafter");
-        $(this).find(".spring-triangle").addClass("spring-triafter"); //上三角にする
-      }
-    });
+  $(".section-season__list-item").click(function () {
+    $(".season-beg", this).slideToggle();
+    var $name = $(this).find(".season-name");
+    var $beg = $(this).find(".season-beg");
+    if ($beg.hasClass("open")) { //.Aがopenを持っている
+      $beg.removeClass("open"); //.openを消す       
+      $(this).find(".triafter").removeClass("triafter");
+      $(this).find(".spring-triafter").removeClass("spring-triafter"); //下三角にする
+    } else { //.Aがopenを持たない
+      $beg.addClass("open");
+      $(this).find(".triangle").addClass("triafter");
+      $(this).find(".spring-triangle").addClass("spring-triafter"); //上三角にする
+    }
   });
   //
 
@@ -84,12 +92,6 @@ $(function () {
     }
   });
 
-
-
-
-});
-
-$(function () {
 
   $('#regular-sp').slick({
     dots: false,
