@@ -330,6 +330,14 @@ svg {
   padding-top: 13px;
 }
 
+@media screen and (max-width: 1024px) {
+  .header .header-contents img {
+    margin-left: 30px;
+    width: 100px;
+    padding-top: 20px;
+  }
+}
+
 @media screen and (max-width: 599px) {
   .header .header-contents img {
     width: 89px;
@@ -341,12 +349,6 @@ svg {
 .header .header-contents nav {
   height: 100%;
   /*いらないかも*/
-}
-
-@media screen and (max-width: 599px) {
-  .header .header-contents nav {
-    display: none;
-  }
 }
 
 .header .header-contents nav a {
@@ -368,10 +370,47 @@ svg {
   padding-left: 70px;
 }
 
-.header .header-button {
+@media screen and (max-width: 1024px) {
+  .header .header-contents nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .header .header-contents nav ul {
+    width: 60%;
+    max-width: 450px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .header .header-contents nav ul li {
+    padding-right: 0px;
+  }
+  .header .header-contents nav ul li:first-child {
+    padding-left: 10%;
+  }
+  .header .header-contents nav ul li:last-child {
+    padding-right: 10%;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .header .header-contents nav {
+    display: none;
+  }
+}
+
+.header-button a {
+  color: #fff !important;
+  padding: 18px;
   float: right;
   margin: 10px 50px 0px 0px;
-  padding: 18px;
   height: 50px;
   border-radius: 25px;
   text-align: center;
@@ -380,12 +419,25 @@ svg {
   background-color: #E07F4C;
 }
 
-.header .header-button a {
-  color: #fff !important;
+.header-button:hover {
+  background-color: #E6B634;
 }
 
-.header .header-button:hover {
-  background-color: #E6B634;
+@media screen and (max-width: 1024px) {
+  .header-button {
+    width: 40%;
+  }
+  .header-button a {
+    line-height: 1.2rem;
+    margin: 10px 30px 0px 0px;
+    white-space: nowrap;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .header-button {
+    width: 100%;
+  }
 }
 
 .header-under {
@@ -458,6 +510,12 @@ svg {
   /* 文字幅のbg*/
 }
 
+@media screen and (max-width: 1024px) {
+  .section-top .section-top__message p {
+    margin-left: 30px;
+  }
+}
+
 @media screen and (max-width: 599px) {
   .section-top .section-top__message p {
     margin-left: 24px;
@@ -481,8 +539,36 @@ svg {
   margin: 0 auto 50px;
 }
 
+.section-toplead__pc .toplead-tb {
+  display: none;
+}
+
+@media screen and (max-width: 1024px) {
+  .section-toplead__pc {
+    padding: 80px 60px 0;
+  }
+}
+
+@media screen and (max-width: 890px) {
+  .section-toplead__pc {
+    max-width: 800px;
+  }
+  .section-toplead__pc .toplead-tb {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 730px) {
+  .section-toplead__pc {
+    text-align: left;
+  }
+}
+
 @media screen and (max-width: 599px) {
   .section-toplead__pc {
+    display: none;
+  }
+  .section-toplead__pc .toplead-tb {
     display: none;
   }
 }
@@ -525,16 +611,16 @@ svg {
   background-repeat: no-repeat;
 }
 
-@media screen and (max-width: 599px) {
-  .section-reason .reason-beg {
-    height: 130px;
-  }
-}
-
 @media screen and (min-width: 1500px) {
   .section-reason .reason-beg {
     height: 230px;
     background-position: 30% 40%;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .section-reason .reason-beg {
+    height: 130px;
   }
 }
 
@@ -593,6 +679,17 @@ svg {
   list-style: none;
 }
 
+@media screen and (max-width: 1024px) {
+  .section-reason .section-reason__text ol {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 0 60px;
+    max-width: 800px;
+  }
+}
+
 @media screen and (max-width: 599px) {
   .section-reason .section-reason__text ol {
     -webkit-box-orient: vertical;
@@ -609,11 +706,17 @@ svg {
   margin-bottom: 18px;
 }
 
+@media screen and (max-width: 1024px) {
+  .section-reason .section-reason__text ol .number {
+    margin-bottom: 12px;
+    line-height: 1.2rem;
+  }
+}
+
 @media screen and (max-width: 599px) {
   .section-reason .section-reason__text ol .number {
     font-size: 1.2rem;
     margin-bottom: 15px;
-    line-height: 1.2rem;
   }
 }
 
@@ -637,11 +740,16 @@ svg {
   margin-bottom: 25px;
 }
 
+@media screen and (max-width: 1024px) {
+  .section-reason .section-reason__text ol h4 {
+    margin-bottom: 15px;
+  }
+}
+
 @media screen and (max-width: 599px) {
   .section-reason .section-reason__text ol h4 {
     font-size: 1.6rem;
     line-height: 1.6rem;
-    margin-bottom: 15px;
   }
 }
 
@@ -655,9 +763,15 @@ svg {
   padding-right: 0px;
 }
 
-@media screen and (max-width: 599px) {
+@media screen and (max-width: 1024px) {
   .section-reason .section-reason__text li {
     padding-right: 0;
+    margin-bottom: 8%;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .section-reason .section-reason__text li {
     margin-bottom: 10%;
   }
   .section-reason .section-reason__text li p {
@@ -676,6 +790,12 @@ svg {
   background-color: #87A07F;
   padding: 90px 50px;
   margin-bottom: 80px;
+}
+
+@media screen and (max-width: 1024px) {
+  .section-shop {
+    padding: 80px 30px;
+  }
 }
 
 @media screen and (max-width: 599px) {
@@ -699,6 +819,12 @@ svg {
   border-radius: 8px;
   overflow: hidden;
   margin-bottom: 50px;
+}
+
+@media screen and (max-width: 1024px) {
+  .section-shop .section-try {
+    max-width: 800px;
+  }
 }
 
 @media screen and (max-width: 599px) {
@@ -737,14 +863,25 @@ svg {
   padding: 0 10% 50px;
 }
 
-@media screen and (max-width: 599px) {
+@media screen and (max-width: 1024px) {
+  .section-shop .section-try ul {
+    padding: 0 60px 50px;
+  }
+}
+
+@media screen and (max-width: 750px) {
   .section-shop .section-try ul {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    padding: 0 30px 50px;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .section-shop .section-try ul {
     padding: 0 4.5% 32px;
-    width: 100%;
   }
 }
 
@@ -753,10 +890,13 @@ svg {
   width: 46%;
 }
 
-@media screen and (max-width: 599px) {
+@media screen and (max-width: 750px) {
   .section-shop .section-try ul li {
     width: 100%;
   }
+}
+
+@media screen and (max-width: 599px) {
   .section-shop .section-try ul li .bold {
     font-size: 1.4rem;
   }
@@ -829,13 +969,13 @@ svg {
   display: none;
 }
 
-@media screen and (max-width: 599px) {
+@media screen and (max-width: 1024px) {
   .section-shop .section-shop__regular {
-    max-width: 430px;
-    /* .slick-dots li button:before {
-        font-size: 20px !important;
-      }*/
+    max-width: 800px;
   }
+}
+
+@media screen and (max-width: 750px) {
   .section-shop .section-shop__regular #regular-sp {
     display: none;
   }
@@ -845,8 +985,26 @@ svg {
   .section-shop .section-shop__regular #regular-pc {
     display: none;
   }
-  .section-shop .section-shop__regular ul#regular-sp > li:not(:first-child) {
-    display: none;
+}
+
+@media screen and (max-width: 599px) {
+  .section-shop .section-shop__regular {
+    max-width: 430px;
+    /*  #regular-sp {
+        display: none;
+      }
+
+      #regular-sp.slick-initialized {
+        display: block;
+      }
+
+      #regular-pc {
+        display: none;
+      }
+
+      ul#regular-sp>li:not(:first-child) {
+        display: none;
+      }*/
   }
 }
 
@@ -898,7 +1056,7 @@ svg {
   }
 }
 
-@media screen and (max-width: 599px) {
+@media screen and (max-width: 750px) {
   .section-shop .section-shop__regular .slick-arrow {
     position: absolute;
     top: 0;
@@ -915,6 +1073,27 @@ svg {
   }
 }
 
+@media screen and (max-width: 599px) {
+  .section-shop .section-shop__regular {
+    /* .slick-arrow {
+        position: absolute;
+        top: 0;
+        height: 65%;
+        z-index: 99;
+      }
+
+      .prev-arrow {
+        left: 10px;
+        width: 3%;
+      }
+
+      .next-arrow {
+        right: 10px;
+        width: 3%;
+      }*/
+  }
+}
+
 .section-shop .section-shop__regular ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -925,6 +1104,19 @@ svg {
           justify-content: center;
   padding: 0 10% 50px;
   font-size: 1.4rem;
+}
+
+@media screen and (max-width: 1024px) {
+  .section-shop .section-shop__regular ul {
+    padding: 0 60px 50px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .section-shop .section-shop__regular ul {
+    padding: 0 4.5%;
+    width: 70%;
+  }
 }
 
 @media screen and (max-width: 599px) {
@@ -940,10 +1132,17 @@ svg {
   margin-right: 3.5%;
 }
 
-@media screen and (max-width: 599px) {
+@media screen and (max-width: 750px) {
   .section-shop .section-shop__regular ul li {
     margin: 0;
   }
+  .section-shop .section-shop__regular ul li .regular-sp__li {
+    padding: 0 4.5%;
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 599px) {
   .section-shop .section-shop__regular ul li .regular-sp__li {
     padding: 0 4.5%;
     margin-bottom: 24px;
@@ -955,9 +1154,14 @@ svg {
   height: auto;
 }
 
+@media screen and (max-width: 750px) {
+  .section-shop .section-shop__regular ul li img {
+    margin: 0 auto 8px;
+  }
+}
+
 @media screen and (max-width: 599px) {
   .section-shop .section-shop__regular ul li img {
-    width: 100%;
     margin: 0 auto 15px;
   }
 }
@@ -1059,6 +1263,12 @@ svg {
   margin: 55px 10%;
 }
 
+@media screen and (max-width: 1024px) {
+  .section-guarantee .section-guarantee__img-pc {
+    margin: 55px 10% 55px 0;
+  }
+}
+
 @media screen and (max-width: 599px) {
   .section-guarantee .section-guarantee__img-pc {
     display: none;
@@ -1077,6 +1287,13 @@ svg {
       -ms-flex-pack: justify;
           justify-content: space-between;
   max-width: 1124px;
+}
+
+@media screen and (max-width: 1024px) {
+  .section-guarantee .section-guarantee__text {
+    padding: 0 60px;
+    max-width: 700px;
+  }
 }
 
 @media screen and (max-width: 599px) {
@@ -1127,6 +1344,12 @@ svg {
   margin-bottom: 70px;
 }
 
+@media screen and (max-width: 1024px) {
+  .organic {
+    padding: 115px 30px 60px;
+  }
+}
+
 @media screen and (max-width: 599px) {
   .organic {
     padding: 55px 24px 50px;
@@ -1136,7 +1359,13 @@ svg {
 
 .organic .organic-title__p {
   font-weight: 600;
-  margin: 0 500px 10px 0;
+  margin: 0 600px 10px 0;
+}
+
+@media screen and (max-width: 1024px) {
+  .organic .organic-title__p {
+    margin: 0 420px 10px 0;
+  }
 }
 
 @media screen and (max-width: 599px) {
@@ -1220,6 +1449,17 @@ svg {
   padding: 0 10%;
 }
 
+@media screen and (max-width: 1024px) {
+  .organic .section-organic__main {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 0 30px;
+    max-width: 700px;
+  }
+}
+
 @media screen and (max-width: 599px) {
   .organic .section-organic__main {
     -webkit-box-orient: vertical;
@@ -1238,6 +1478,13 @@ svg {
   line-height: 3.2rem;
 }
 
+@media screen and (max-width: 1024px) {
+  .organic .section-organic__main p {
+    width: 100%;
+    margin: 0 auto 60px;
+  }
+}
+
 @media screen and (max-width: 599px) {
   .organic .section-organic__main p {
     margin-right: 0px;
@@ -1253,6 +1500,12 @@ svg {
   border-collapse: collapse;
 }
 
+@media screen and (max-width: 1024px) {
+  .organic .section-organic__main table {
+    width: 100%;
+  }
+}
+
 @media screen and (max-width: 599px) {
   .organic .section-organic__main table {
     width: 100%;
@@ -1264,6 +1517,12 @@ svg {
   vertical-align: middle;
   width: 115px;
   border-right: 1px solid #707070;
+}
+
+@media screen and (max-width: 1024px) {
+  .organic .section-organic__main table th {
+    line-height: 3rem;
+  }
 }
 
 @media screen and (max-width: 599px) {
@@ -1342,13 +1601,21 @@ svg {
   border-radius: 8px;
 }
 
-@media screen and (max-width: 599px) {
+@media screen and (max-width: 1024px) {
   .organic .graph {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    padding: 20px 24px 0;
+    padding-top: 30px;
+    max-width: 640px;
+    margin: 0 30px;
+    display: inline-block;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .organic .graph {
     max-width: 430px;
   }
 }
@@ -1357,11 +1624,20 @@ svg {
   display: none;
 }
 
+@media screen and (max-width: 1024px) {
+  .organic .graph .graph-title__sp {
+    font-size: 1.6rem;
+    font-weight: bold;
+    line-height: 2.6rem;
+  }
+  .organic .graph .graph-title__sp br {
+    display: none;
+  }
+}
+
 @media screen and (max-width: 599px) {
   .organic .graph .graph-title__sp {
-    display: block;
     font-size: 1.4rem;
-    font-weight: bold;
     line-height: 2.1rem;
   }
 }
@@ -1371,17 +1647,30 @@ svg {
   padding: 30px 25px 22px 25px;
 }
 
+@media screen and (max-width: 1024px) {
+  .organic .graph #lottie-graph2 {
+    width: 50%;
+    margin: 25px auto 30px;
+    padding: 0;
+  }
+}
+
 @media screen and (max-width: 599px) {
   .organic .graph #lottie-graph2 {
     width: 70%;
     margin: 25px auto 20px;
-    padding: 0;
   }
 }
 
 .organic .graph #lottie-graph2 svg {
   min-width: 300px !important;
   min-height: 220px !important;
+}
+
+@media screen and (max-width: 1080px) {
+  .organic .graph #lottie-graph2 svg {
+    min-width: 250px !important;
+  }
 }
 
 @media screen and (max-width: 599px) {
@@ -1405,11 +1694,18 @@ svg {
   margin: 0 0 0 auto;
 }
 
+@media screen and (max-width: 1024px) {
+  .organic .graph .graph-text {
+    width: 90%;
+    max-width: 100%;
+    padding: 0;
+    margin: 0 auto 30px;
+  }
+}
+
 @media screen and (max-width: 599px) {
   .organic .graph .graph-text {
     width: 100%;
-    max-width: 100%;
-    padding: 0;
     margin: 0 auto;
   }
 }
@@ -1422,6 +1718,12 @@ svg {
   display: none;
 }
 
+@media screen and (max-width: 676px) {
+  .organic .graph .graph-text .graph-title br {
+    display: block !important;
+  }
+}
+
 @media screen and (max-width: 360px) {
   .organic .graph .graph-text .graph-title br {
     display: block !important;
@@ -1431,6 +1733,12 @@ svg {
 @media screen and (max-width: 599px) {
   .organic .graph .graph-text .graph-title br {
     display: none;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .organic .graph .graph-text .graph-title {
+    margin-bottom: 25px;
   }
 }
 
@@ -1456,6 +1764,14 @@ svg {
   display: inline-block;
 }
 
+@media screen and (max-width: 676px) {
+  .organic .graph .graph-text .graph-title p {
+    line-height: 2.8rem;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(80%, transparent), color-stop(80%, #EFD38A));
+    background: linear-gradient(transparent 80%, #EFD38A 80%);
+  }
+}
+
 @media screen and (max-width: 599px) {
   .organic .graph .graph-text .graph-title p {
     font-size: 1.2rem;
@@ -1472,6 +1788,12 @@ svg {
 @media screen and (max-width: 599px) {
   .organic .graph .graph-text .graph-title .graph-text__span {
     font-size: 2.2rem;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .organic .graph .graph-text .graph-text__span-pconly {
+    display: none;
   }
 }
 
@@ -1505,6 +1827,12 @@ svg {
   background-size: 145px;
 }
 
+@media screen and (max-width: 1024px) {
+  .section-season {
+    padding: 24px 30px 0;
+  }
+}
+
 .section-season h2 {
   font-size: 2.2rem;
   margin-bottom: 40px;
@@ -1531,6 +1859,12 @@ svg {
 
 .section-season p .section-season__p-br {
   display: none;
+}
+
+@media screen and (max-width: 700px) {
+  .section-season p .section-season__p-br {
+    display: block;
+  }
 }
 
 @media screen and (max-width: 599px) {
@@ -1708,6 +2042,65 @@ svg {
   background-size: contain;
   background-position: calc(50% - 120px) -10px;
   background-size: 160px;
+  /*@media screen and(max-width : 599px) {
+    .farmar-contents {
+      margin: 0 24px 20px;
+      padding: 0 20px;
+      border-radius: 8px;
+      background-color: #C7D3C0;
+    }
+
+    #farmar-sp {
+      display: none;
+    }
+
+    #farmar-sp.slick-initialized {
+      display: block;
+    }
+
+
+    #farmar-pc {
+      display: none;
+    }
+
+    ul#farmar-sp>li:not(:first-child) {
+      display: none;
+    }
+
+    //?????nanikore↑
+    .slick-dots li {
+      display: inline;
+      //margin: 0;
+
+      button {
+        display: inline-block;
+      }
+    }
+
+.slick-arrow {
+      position: absolute;
+      top: 0;
+      height: 95%;
+      z-index: 99;
+    }
+
+    .prev-arrow {
+      left: 0px;
+      width: 3%;
+    }
+
+    .next-arrow {
+      right: 0px;
+      width: 3%;
+
+    }
+  }*/
+}
+
+@media screen and (max-width: 1024px) {
+  .section-farmar {
+    padding: 50px 30px 0;
+  }
 }
 
 @media screen and (max-width: 599px) {
@@ -1740,9 +2133,14 @@ svg {
           justify-content: center;
 }
 
+@media screen and (max-width: 750px) {
+  .section-farmar ul {
+    padding: 0 30px;
+  }
+}
+
 @media screen and (max-width: 599px) {
   .section-farmar ul {
-    display: block;
     max-width: 430px;
   }
 }
@@ -1753,6 +2151,13 @@ svg {
   border-radius: 8px;
   background-color: #C7D3C0;
   padding-top: 30px;
+}
+
+@media screen and (max-width: 750px) {
+  .section-farmar ul li {
+    width: 100%;
+    background-color: transparent;
+  }
 }
 
 @media screen and (max-width: 599px) {
@@ -1771,6 +2176,14 @@ svg {
   margin-bottom: 30px;
 }
 
+@media screen and (max-width: 750px) {
+  .section-farmar ul li img {
+    width: 100%;
+    padding: 20px 20%;
+    margin-bottom: 10px;
+  }
+}
+
 @media screen and (max-width: 599px) {
   .section-farmar ul li img {
     width: 100%;
@@ -1781,6 +2194,12 @@ svg {
 
 .section-farmar ul li h4 {
   margin-bottom: 30px;
+}
+
+@media screen and (max-width: 750px) {
+  .section-farmar ul li h4 {
+    margin-bottom: 25px;
+  }
 }
 
 @media screen and (max-width: 599px) {
@@ -1803,6 +2222,13 @@ svg {
   line-height: 2.8rem;
 }
 
+@media screen and (max-width: 750px) {
+  .section-farmar ul li .section-farmar__text {
+    padding: 0 25px;
+    margin-bottom: 15px;
+  }
+}
+
 @media screen and (max-width: 599px) {
   .section-farmar ul li .section-farmar__text {
     font-size: 1.3rem;
@@ -1817,21 +2243,43 @@ svg {
   margin-bottom: 24px;
 }
 
+.section-farmar ul li .section-farmar__name br {
+  display: none;
+}
+
+@media screen and (max-width: 750px) {
+  .section-farmar ul li .section-farmar__name {
+    padding: 0 0 20px 0;
+    margin-bottom: 0px;
+  }
+  .section-farmar ul li .section-farmar__name br {
+    display: block;
+  }
+}
+
 @media screen and (max-width: 599px) {
   .section-farmar ul li .section-farmar__name {
     font-size: 1.2rem;
     padding: 0 0 15px 0;
-    margin-bottom: 0px;
   }
 }
 
 .section-farmar ul li:first-child {
   margin-right: 80px;
+  /* @media screen and(max-width : 599px) {
+          margin-right: 0;
+        }*/
 }
 
-@media screen and (max-width: 599px) {
+@media screen and (max-width: 1024px) {
   .section-farmar ul li:first-child {
-    margin-right: 0;
+    margin-right: 40px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .section-farmar ul li:first-child {
+    margin-right: 0px;
   }
 }
 
@@ -1839,34 +2287,7 @@ svg {
   display: none;
 }
 
-@media screen and (max-width: 599px) {
-  .section-farmar .farmar-contents {
-    margin: 0 24px 20px;
-    padding: 0 20px;
-    border-radius: 8px;
-    background-color: #C7D3C0;
-  }
-  .section-farmar #farmar-sp {
-    display: none;
-  }
-  .section-farmar #farmar-sp.slick-initialized {
-    display: block;
-  }
-  .section-farmar #farmar-pc {
-    display: none;
-  }
-  .section-farmar ul#farmar-sp > li:not(:first-child) {
-    display: none;
-  }
-  .section-farmar .slick-dots li {
-    display: inline;
-  }
-  .section-farmar .slick-dots li button {
-    display: inline-block;
-  }
-}
-
-@media screen and (max-width: 599px) {
+@media screen and (max-width: 750px) {
   .section-farmar .slick-arrow {
     position: absolute;
     top: 0;
@@ -1881,6 +2302,43 @@ svg {
     right: 0px;
     width: 3%;
   }
+  .section-farmar .farmar-contents {
+    margin: 0 24px 20px;
+    padding: 0 20px;
+    border-radius: 8px;
+    background-color: #C7D3C0;
+  }
+}
+
+@media screen and (max-width: 750px) and (max-width: 1024px) {
+  .section-farmar .farmar-contents {
+    margin: 0 0px 20px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .section-farmar #farmar-sp {
+    display: none;
+  }
+  .section-farmar #farmar-sp.slick-initialized {
+    display: block;
+  }
+  .section-farmar #farmar-pc {
+    display: none;
+  }
+  .section-farmar .slick-dots {
+    width: 100px;
+    position: static;
+  }
+  .section-farmar .slick-dots li {
+    display: inline;
+  }
+  .section-farmar .slick-dots li button {
+    display: inline-block;
+  }
+  .section-farmar ul#farmar-sp > li:not(:first-child) {
+    display: none;
+  }
 }
 
 .section-voice {
@@ -1888,6 +2346,12 @@ svg {
   margin-bottom: 90px;
   padding: 0 50px;
   position: relative;
+}
+
+@media screen and (max-width: 1024px) {
+  .section-voice {
+    padding: 0 30px;
+  }
 }
 
 @media screen and (max-width: 599px) {
@@ -2034,7 +2498,7 @@ svg {
   margin-bottom: 0px;
 }
 
-@media screen and (max-width: 599px) {
+@media screen and (max-width: 750px) {
   .section-voice #voice-pc {
     display: none;
   }
@@ -2044,44 +2508,60 @@ svg {
   display: none;
 }
 
-@media screen and (max-width: 599px) {
+@media screen and (max-width: 750px) {
   .section-voice #voice-sp {
     display: block;
     margin: 0 auto;
-    max-width: 430px;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    padding: 0 30px;
   }
+}
+
+@media screen and (max-width: 750px) and (max-width: 599px) {
+  .section-voice #voice-sp {
+    max-width: 430px;
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 750px) {
   .section-voice #voice-sp li {
     list-style: none;
     margin-bottom: 0px;
     padding: 0;
     width: 100%;
-    /* #voice-sp {
-        display: none;
-      }*/
   }
   .section-voice #voice-sp li .section-voice__sp-container {
-    margin: 0 24px 20px;
+    margin: 0 0 20px;
     padding: 20px;
     background-color: #fff;
     border-radius: 8px;
     -webkit-box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
             box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
   }
+}
+
+@media screen and (max-width: 750px) and (max-width: 599px) {
+  .section-voice #voice-sp li .section-voice__sp-container {
+    margin: 0 24px 20px;
+  }
+}
+
+@media screen and (max-width: 750px) {
   .section-voice #voice-sp li .section-voice__sp-container br {
     display: none;
   }
 }
 
-@media screen and (max-width: 599px) and (max-width: 396px) {
+@media screen and (max-width: 750px) and (max-width: 396px) {
   .section-voice #voice-sp li .section-voice__sp-container h4 {
     font-size: 1.2rem;
   }
 }
 
-@media screen and (max-width: 599px) {
+@media screen and (max-width: 750px) {
   .section-voice #voice-sp li .section-voice__sp-container .section-voice__sp-titles {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2090,14 +2570,24 @@ svg {
     margin-bottom: 20px;
   }
   .section-voice #voice-sp li .section-voice__sp-container .section-voice__sp-titles img {
-    width: 25%;
+    padding: 0 20px;
+    width: 30%;
     height: 100%;
     margin: 0 5% 0 0;
     -webkit-filter: drop-shadow(3px 3px 12px #E6E6E6);
             filter: drop-shadow(3px 3px 12px #E6E6E6);
   }
+}
+
+@media screen and (max-width: 750px) and (max-width: 599px) {
+  .section-voice #voice-sp li .section-voice__sp-container .section-voice__sp-titles img {
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 750px) {
   .section-voice #voice-sp li .section-voice__sp-container .section-voice__sp-titles .section-voice__sp-title {
-    width: 75%;
+    width: 70%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2113,23 +2603,55 @@ svg {
             align-items: flex-start;
   }
   .section-voice #voice-sp li .section-voice__sp-container .section-voice__sp-titles .section-voice__sp-title h4 {
-    font-size: 1.4rem;
     text-align: left;
+    font-size: 1.6rem;
   }
+}
+
+@media screen and (max-width: 750px) and (max-width: 599px) {
+  .section-voice #voice-sp li .section-voice__sp-container .section-voice__sp-titles .section-voice__sp-title h4 {
+    font-size: 1.4rem;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .section-voice #voice-sp li .section-voice__sp-container .section-voice__sp-titles .section-voice__sp-title p {
+    font-size: 1.4rem;
+  }
+}
+
+@media screen and (max-width: 750px) and (max-width: 599px) {
   .section-voice #voice-sp li .section-voice__sp-container .section-voice__sp-titles .section-voice__sp-title p {
     font-size: 1.2rem;
   }
+}
+
+@media screen and (max-width: 750px) {
   .section-voice #voice-sp li .section-voice__sp-container .voice {
     width: 100%;
     text-align: justify;
+    font-size: 1.4rem;
+    padding: 0 20px;
+  }
+}
+
+@media screen and (max-width: 750px) and (max-width: 599px) {
+  .section-voice #voice-sp li .section-voice__sp-container .voice {
     line-height: 2.6rem;
     font-size: 1.3rem;
+    padding: 0;
   }
+}
+
+@media screen and (max-width: 750px) {
   .section-voice #voice-sp li #voice-sp.slick-initialized {
     display: block;
   }
   .section-voice #voice-sp li ul#voice-sp > li:not(:first-child) {
     display: none;
+  }
+  .section-voice #voice-sp .slick-dots {
+    position: static;
   }
   .section-voice #voice-sp .slick-dots li {
     display: inline;
@@ -2159,6 +2681,12 @@ svg {
   margin-bottom: 70px;
   text-align: center;
   padding: 30px 50px 0;
+}
+
+@media screen and (max-width: 1024px) {
+  .section-QA {
+    padding: 30px 60px 0;
+  }
 }
 
 @media screen and (max-width: 599px) {
@@ -2348,6 +2876,12 @@ svg {
   position: relative;
 }
 
+@media screen and (max-width: 1024px) {
+  .section-mediainfo {
+    padding: 0 30px;
+  }
+}
+
 @media screen and (max-width: 599px) {
   .section-mediainfo {
     padding: 0px 40px;
@@ -2426,6 +2960,13 @@ svg {
   padding: 0 50px;
 }
 
+@media screen and (max-width: 1024px) {
+  .section-try2 {
+    padding: 0 30px;
+    max-width: 800px;
+  }
+}
+
 @media screen and (max-width: 599px) {
   .section-try2 {
     padding: 0 24px;
@@ -2480,6 +3021,22 @@ svg {
   padding: 0 10% 50px;
 }
 
+@media screen and (max-width: 1024px) {
+  .section-try2 ul {
+    padding: 0 60px 50px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .section-try2 ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 0 30px 50px;
+  }
+}
+
 @media screen and (max-width: 599px) {
   .section-try2 ul {
     -webkit-box-orient: vertical;
@@ -2493,6 +3050,12 @@ svg {
 .section-try2 ul li {
   list-style: none;
   width: 46%;
+}
+
+@media screen and (max-width: 750px) {
+  .section-try2 ul li {
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 599px) {
